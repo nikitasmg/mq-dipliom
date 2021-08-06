@@ -46,7 +46,7 @@ html {
 /*header*/
 .header {
     position: relative;
-    background-image: url(/images/banner-mobile.jpg);
+    background-image: url(../images/banner-mobile.jpg);
     background-size: cover;
     background-color: black;
     
@@ -153,7 +153,7 @@ html {
     align-items: center;
     width: 15rem;
     height: 20rem;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: transparent;
     position: absolute;
     top: 0;
     right: 0;
@@ -164,7 +164,7 @@ html {
 }
 .nav__li {
     text-align: center;
-    margin: 1rem;
+    margin-bottom: 2rem;
     
 }
 .nav__item {
@@ -206,7 +206,7 @@ html {
 }
 
 .trends_article{
-    background-image: url(/images/trend1.jpg);
+    background-image: url(../images/trend1.jpg);
     background-size: cover;
     padding: 9rem 0 1rem;
     position: relative;
@@ -215,15 +215,15 @@ html {
 }
 
 .trend-second {
-    background-image: url(/images/trend2.jpg);
+    background-image: url(../images/trend2.jpg);
 }
 
 .trend-third {
-    background-image: url(/images/trend3.jpg);
+    background-image: url(../images/trend3.jpg);
 }
 
 .trend-fourth {
-    background-image: url(/images/trend4.jpg);
+    background-image: url(../images/trend4.jpg);
 }
 
 .trends_article::before{
@@ -289,4 +289,54 @@ html {
     color: white;
     text-transform: uppercase;
     line-height: 1.25;
+}
+
+.last-post__image-container {
+    width: 330px;
+    margin-bottom: 1.5rem;
+
+}
+
+.last-post__img {
+    width: 33rem;
+    height: 25rem;
+
+}
+
+.last-post__tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.6rem;
+}
+
+.last-post__title {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;  
+}
+
+.last-post__info {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.last-post__date {
+    margin-right: 1.6rem;
+    font-size: 1.2rem;
+    color: #888888;
+}
+
+.last-post__author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.last-post__content {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
 }
