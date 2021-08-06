@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style__mobile.css">
+    <link rel="stylesheet" href="css/style__tablet.css" media="screen and (min-width:361px) and (max-width:768px)">
+    <link rel="stylesheet" href="css/style__desktop.css" media="screen and (min-width:769px)">
+    <title>Diplom</title>
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__burger">
+                <input id="burger" type="checkbox">
+                <label class="burger__container" for="burger">
+                 <span class="button-burger"></span>
+                </label>
+                <!-- Навигация -->
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__li"><a class="nav__item" href="">Главная</a></li>
+                        <li class="nav__li"><a class="nav__item" href="">Посты</a></li>
+                        <li class="nav__li"><a class="nav__item" href="">Статьи</a></li>
+                        <li class="nav__li"><a class="nav__item" href="">Теги</a></li>
+                        <li class="nav__li"><a class="nav__item" href="">Контакты</a></li>
+                    </ul>                
+                </nav>
+               </div>
+            <div class="header__logo-container">
+                <img class="header__logo" src="/svg/noemi-logo.svg" alt="Noemi logo">
+            </div>
+            <h1 class="header__title">
+                Блог о творчестве, спорте, и образе жизни
+            </h1>
+        </div>
+    </header>
+    <!-- Тренды -->
+    <section class="trends">
+        <h2 class="title trends__title">
+            Сейчас в тренде
+        </h2>
+        <article class="trends_article trend-first">
+            <div class="container">
+                <div class="trends__content">
+                    <ul class="trends__tags">
+                        <li class="tags__li"> <a class="tags__link" href="">Lifestyle</a> </li>
+                        <li class="tags__li"> <a class="tags__link" href="">Interior </a></li>
+                    </ul>
+                    <h3 class="content__title"> Сейчас в тренде: сад 
+                        на подоконнике </h3>
+                </div>
+            </div>
+        </article>
+        <article class="trends_article trend-second">
+            <div class="container">
+                <div class="trends__content">
+                    <ul class="trends__tags">
+                        <li class="tags__li"> <a class="tags__link" href="">food</a> </li>
+                    </ul>
+                    <h3 class="content__title"> сыры на красивых картинках
+                        из интернета: какие они на
+                        вкус? </h3>
+                </div>
+            </div>
+        </article>
+        <article class="trends_article trend-third">
+            <div class="container">
+                <div class="trends__content">
+                    <ul class="trends__tags">
+                        <li class="tags__li"> <a class="tags__link" href="">lifestyle</a> </li>
+                        <li class="tags__li"> <a class="tags__link" href="">travel</a> </li>
+                    </ul>
+                    <h3 class="content__title"> СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД
+                        В ГОРЫ </h3>
+                </div>
+            </div>
+        </article>
+        <article class="trends_article trend-fourth">
+            <div class="container">
+                <div class="trends__content">
+                    <ul class="trends__tags">
+                        <li class="tags__li"> <a class="tags__link" href="">food</a> </li>
+                        <li class="tags__li"> <a class="tags__link" href="">health</a> </li>
+                    </ul>
+                    <h3 class="content__title"> Сейчас в тренде: сКОЛЬКО
+                        ВИТАМИНА c В ЛИМОНАХ? </h3>
+                </div>
+            </div>
+        </article>
+    </section>
+    <div class="page">
+        <main class="main">
+            <article class="main__last-post">
+                <div class="last-post__image-container">
+                    <img class="last-post__img" src="/images/last-post1.jpg" alt="">
+                </div>
+                <header class="last-post__header">
+                    <ul class="last-post__tags">
+                        <li class="tags__li"> <a class="tags__link" href=""> travel</a></li>
+                        <li class="tags__li"> <a class="tags__link" href=""> health</a></li>
+                    </ul>
+                    <h3 class="last-post__title"> 10 мест, ради которых стоит
+                        проснуться на рассвете </h3>
+                    <div class="last-post__info">
+                        <time class="last-post__date">10 июня 2019</time>
+                        <div class="last-post__author">Неизвестный автор
+                        </div>
+                    </div>
+                    <div class="last-post__content">
+                        <p>Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
+                    </div> 
+                </header>
+            </article>
+        </main>
+        <aside class="aside"></aside>
+    </div>
+</body>
+</html>
