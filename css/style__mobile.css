@@ -1,9 +1,15 @@
 :root {
     --main-color: rgb(181, 159, 91);
-    --main-opacity-color: rgba(181,159,91,0.6)
+    --main-opacity-color: rgba(181, 159, 91, 0.6);
 }
 
-*,h1,h2,h3,h4,h5,h6 {
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -11,45 +17,40 @@
 
 a {
     text-decoration: none;
-  }
+}
 
 @font-face {
-    font-family: 'Open Sans';
-    src: local('Open Sans'),
-         url('/fonts/OpenSans-Regular.woff2') format('woff2'), 
-         url('/fonts/OpenSans-Regular.woff') format('woff'),
-         url('/fonts/OpenSans-Regular.ttf') format('ttf');
+    font-family: "Open Sans";
+    src: local("Open Sans"), url("/fonts/OpenSans-Regular.woff2") format("woff2"), url("/fonts/OpenSans-Regular.woff") format("woff"), url("/fonts/OpenSans-Regular.ttf") format("ttf");
     font-weight: normal;
-    
-  }
+}
+
 @font-face {
-    font-family: 'Open Sans';
-    src: local('Open Sans'),
-         url('/fonts/OpenSans-Bold.woff2') format('woff2'), 
-         url('/fonts/OpenSans-Bold.woff') format('woff'),
-         url('/fonts/OpenSans-Bold.ttf') format('ttf');
+    font-family: "Open Sans";
+    src: local("Open Sans"), url("/fonts/OpenSans-Bold.woff2") format("woff2"), url("/fonts/OpenSans-Bold.woff") format("woff"), url("/fonts/OpenSans-Bold.ttf") format("ttf");
     font-weight: bold;
-  }
+}
 
 html {
     font-size: 62.5%;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-weight: normal;
 }
 
 .container {
-    max-width: 36rem;
+    max-width: 64rem;
     margin: 0 auto;
-    padding:0 1.5rem;
+    padding: 0 1.5rem;
 }
 
+
 /*header*/
+
 .header {
     position: relative;
     background-image: url(../images/banner-mobile.jpg);
     background-size: cover;
     background-color: black;
-    
     z-index: 2;
     padding-bottom: 22.2rem;
 }
@@ -57,6 +58,7 @@ html {
 .header__container {
     padding-top: 3.2rem;
 }
+
 .header::before {
     content: "";
     position: absolute;
@@ -65,48 +67,49 @@ html {
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: .6;
+    opacity: 0.6;
     z-index: -1;
 }
 
 .header__burger {
     text-align: right;
     position: relative;
-
 }
 
 #burger {
     position: absolute;
-    z-index:2;
+    z-index: 2;
     right: 0;
     opacity: 0;
 }
 
-#burger:checked ~  .header__nav {
+#burger:checked~.header__nav {
     display: flex;
 }
 
-#burger:checked ~ .burger__container .button-burger {
+#burger:checked~.burger__container .button-burger {
     background-color: transparent;
 }
 
-#burger:checked ~ .burger__container .button-burger::after, #burger:checked ~ 
-.burger__container .button-burger::before {
-    top:0;
-} 
+#burger:checked~.burger__container .button-burger::after,
+#burger:checked~.burger__container .button-burger::before {
+    top: 0;
+}
 
-#burger:checked ~ .burger__container .button-burger::after {
+#burger:checked~.burger__container .button-burger::after {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
 }
 
-#burger:checked ~ .burger__container .button-burger::before {
+#burger:checked~.burger__container .button-burger::before {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
- .burger-top {
-     background-color: red;
- }
+
+.burger-top {
+    background-color: red;
+}
+
 .burger__container {
     display: flex;
     align-items: flex-end;
@@ -125,10 +128,10 @@ html {
     width: 100%;
     height: 0.3rem;
     transition: 0.4s;
-
 }
 
-.button-burger::after, .button-burger::before {
+.button-burger::after,
+.button-burger::before {
     content: "";
     display: block;
     position: absolute;
@@ -136,15 +139,15 @@ html {
     width: 100%;
     height: 0.3rem;
     transition: 0.4s;
-  }
+}
 
 .button-burger::after {
     top: 8px;
-  }
+}
 
 .button-burger::before {
     top: -8px;
-  }  
+}
 
 .header__nav {
     display: none;
@@ -158,21 +161,21 @@ html {
     top: 0;
     right: 0;
 }
+
 .nav__list {
     list-style: none;
-    
 }
+
 .nav__li {
     text-align: center;
     margin-bottom: 2rem;
-    
 }
+
 .nav__item {
     font-size: 1.3rem;
     color: white;
     text-transform: uppercase;
     z-index: 2;
-    
 }
 
 .header__logo-container {
@@ -185,8 +188,6 @@ html {
 
 .header__logo {
     z-index: 3;
-    
-    
 }
 
 .header__title {
@@ -199,13 +200,15 @@ html {
     text-transform: uppercase;
 }
 
+
 /*trends*/
 
 .trends {
     margin-top: 4rem;
+    margin-bottom: 4.5rem;
 }
 
-.trends_article{
+.trends_article {
     background-image: url(../images/trend1.jpg);
     background-size: cover;
     padding: 9rem 0 1rem;
@@ -226,7 +229,7 @@ html {
     background-image: url(../images/trend4.jpg);
 }
 
-.trends_article::before{
+.trends_article::before {
     content: "";
     position: absolute;
     top: 0;
@@ -234,9 +237,10 @@ html {
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: .6;
+    opacity: 0.6;
     z-index: -1;
 }
+
 .title {
     color: #000;
     text-transform: uppercase;
@@ -245,7 +249,6 @@ html {
     text-align: center;
     position: relative;
     margin-bottom: 2.5rem;
-    
 }
 
 .title::after {
@@ -254,7 +257,7 @@ html {
     height: 0.3rem;
     background-color: var(--main-color);
     display: block;
-    margin: 1rem auto 0;     
+    margin: 1rem auto 0;
 }
 
 .trends__content {
@@ -291,16 +294,30 @@ html {
     line-height: 1.25;
 }
 
-.last-post__image-container {
-    width: 330px;
-    margin-bottom: 1.5rem;
+.main__last-post {
+    margin-bottom: 3.5rem;
+}
 
+.main__last-post:last-child {
+    margin-bottom: 4.4rem;
+}
+
+.main__last-post::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.3rem;
+    background-color: #eeeeee;
+    margin-top: 1.8rem;
+}
+
+.last-post__image-container {
+    max-width: 61rem;
+    margin: 0 auto 1.5rem;
 }
 
 .last-post__img {
-    width: 33rem;
-    height: 25rem;
-
+    width: 100%;
 }
 
 .last-post__tags {
@@ -310,17 +327,23 @@ html {
     margin-bottom: 1.6rem;
 }
 
-.last-post__title {
+.last-post__title,
+.last-post__title_link {
     font-size: 1.6rem;
     line-height: 1.25;
     text-transform: uppercase;
-    margin-bottom: 2.4rem;  
+    margin-bottom: 2.4rem;
+    color: black;
+    transition: color ease-in-out .2s;
+}
+
+.last-post__title_link:hover {
+    color: var(--main-color);
 }
 
 .last-post__info {
     display: flex;
     flex-wrap: nowrap;
-
 }
 
 .last-post__date {
@@ -336,7 +359,67 @@ html {
 }
 
 .last-post__content {
-    margin-bottom: 2rem;
     font-size: 1.4rem;
     line-height: 1.4;
+}
+
+.last-post__content p:nth-child(n+2) {
+    margin-top: 1.2rem;
+}
+
+
+/*aside*/
+
+
+/*new-posts*/
+
+.aside__new-post {
+    display: flex;
+    margin-bottom: 2.2rem;
+}
+
+.new-post_img-container {
+    min-width: 7rem;
+    margin-right: 1.7rem;
+}
+
+.new-post__img {
+    width: 7rem;
+    height: 7rem;
+}
+
+.new-post__date {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.new-post__title,
+.new-post__title_link {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    color: black;
+    transition: color ease-in .2s;
+}
+
+.new-post__title_link:hover {
+    color: var(--main-color);
+}
+
+
+/*search-form*/
+
+.new-post__search-input {
+    width: 100%;
+    height: 4.8rem;
+    padding: 1rem 7rem 1rem 1.8rem;
+}
+
+.new-post__search-input::placeholder {
+    color: black;
+    font-size: 1.3rem;
+}
+
+.new-post__search-btn {
+    width: 4.8rem;
+    height: 4.8rem;
 }
