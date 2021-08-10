@@ -250,9 +250,65 @@
                     </header>
                 </article>
                 <form class="new-post__form" action="search">
-                    <input class="new-post__search-input" type="search" placeholder="Найти...">
-                    <button class="new-post__search-btn"></button>
+                    <label> <span class="hidden-text"> Поле поиска</span>
+                    <input class="input new-post__search-input" type="search" placeholder="Найти..." required></label>
+                    <button type="submit" class="btn new-post__search-btn"><span class="hidden-text"> Кнопка поискаl</span></button>
                 </form>
+            </section>
+            <section class="subscribe">
+                <h2 class="title subscribe__title"> Рассылка</h2>
+                <form action="subscribe-form">
+                    <label> <span class="hidden-text"> Поле ввода email</span>
+                    <input type="email" class="input subscribe__input" required placeholder="Ваш email-адрес"></label>
+                    <button type="submit" class="btn subscribe__btn"> <span class="hidden-text"> Кнопка подписаться</span>подписаться</button>
+                </form>
+            </section>
+
+            <section class="aside__tags">
+                <h2 class="title tags__title"> теги</h2>
+                <ul class="tags__list">
+                    <li class="tags__item"> <a href="#" class="aside-tags__link"> fashion</a></li>
+                    <li class="tags__item"> <a href="#" class="aside-tags__link"> music</a></li>
+                    <li class="tags__item"> <a href="#" class="aside-tags__link"> lifestyle</a></li>
+                    <li class="tags__item"> <a href="#" class="aside-tags__link"> art</a></li>
+                    <li class="tags__item"> <a href="#" class="aside-tags__link"> interior</a></li>
+                    <li class="tags__item"> <a href="#" class="aside-tags__link"> travel</a></li>
+                    <li class="tags__item"> <a href="#" class="aside-tags__link"> food</a></li>
+                    <li class="tags__item"> <a href="#" class="aside-tags__link"> health</a></li>
+
+                </ul>
+            </section>
+            <section class="aside__thems">
+                <h2 class="title thems__title"> Темы</h2>
+                <ul class="thems__list">
+                    <li class="thems__item"><a href="#" class="thems__link">Красота</a> <span class="thems__count">12</span></li>
+                    <li class="thems__item"><a href="#" class="thems__link">Здоровье</a> <span class="thems__count">4</span></li>
+                    <li class="thems__item"><a href="#" class="thems__link">Образ жизни</a> <span class="thems__count">145</span></li>
+                    <li class="thems__item"><a href="#" class="thems__link">Музыка</a> <span class="thems__count">28</span></li>
+                    <li class="thems__item"><a href="#" class="thems__link">Спорт</a> <span class="thems__count">62</span></li>
+                    <li class="thems__item"><a href="#" class="thems__link">Йога</a> <span class="thems__count">8</span></li>
+                </ul>
+            </section>
+            <section class="shop">
+                <h2 class="title shop__title"> Наши изделия</h2>
+                <picture class="shop__picture">
+                    <source class="shop__img-tablet" srcset="images/shop-item-tablet1.jpg" media="(min-width: 641px) and (max-width: 1200px)">
+                    <source class="shop__img-desk" srcset="images/shop-item-desk1.jpg" media="(min-width: 1201px)">
+                    <img class="shop__img" src="images/shop-item-mobile1.jpg" alt="Подушки на диван">
+                </picture>
+                <div class="shop__content">
+                    <h3 class="shop__title">подушки на диван</h3>
+                    <p class="shop__text"> Набор из двух подушек с модными принтами. Видео о создании <a class="shop__text-link" href="#">здесь</a> .</p>
+                    <div class="shop__bottom-content">
+                        <div class="shop__price">
+                            <span class="price__old">1000 ₽</span>
+                            <span class="price__new">800 ₽</span>
+                        </div>
+                        <div class="shop__link">
+                            <a href="#"> в магазин</a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </aside>
     </div>

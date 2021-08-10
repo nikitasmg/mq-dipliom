@@ -19,6 +19,13 @@ a {
     text-decoration: none;
 }
 
+.hidden-text {
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+}
+
 @font-face {
     font-family: "Open Sans";
     src: local("Open Sans"), url("/fonts/OpenSans-Regular.woff2") format("woff2"), url("/fonts/OpenSans-Regular.woff") format("woff"), url("/fonts/OpenSans-Regular.ttf") format("ttf");
@@ -334,7 +341,7 @@ html {
     text-transform: uppercase;
     margin-bottom: 2.4rem;
     color: black;
-    transition: color ease-in-out .2s;
+    transition: color ease-in-out 0.2s;
 }
 
 .last-post__title_link:hover {
@@ -398,7 +405,7 @@ html {
     font-size: 1.4rem;
     line-height: 1.3;
     color: black;
-    transition: color ease-in .2s;
+    transition: color ease-in 0.2s;
 }
 
 .new-post__title_link:hover {
@@ -408,18 +415,201 @@ html {
 
 /*search-form*/
 
-.new-post__search-input {
-    width: 100%;
-    height: 4.8rem;
-    padding: 1rem 7rem 1rem 1.8rem;
+.new-post__form {
+    position: relative;
+    margin-bottom: 4.3rem;
 }
 
-.new-post__search-input::placeholder {
-    color: black;
+.new-post__search-input,
+.input {
+    width: 100%;
+    height: 4.8rem;
+    padding: 1rem 5rem 1rem 1.8rem;
+    position: relative;
+    border: none;
+    border-radius: none;
+    outline: none;
+    background-color: #f4f7f6;
+}
+
+.input:focus {
+    outline: var(--main-color) 1px solid;
+}
+
+.inout::placeholder {
+    color: rgba(0, 0, 0, 0.54);
     font-size: 1.3rem;
+    font-family: inherit;
 }
 
 .new-post__search-btn {
     width: 4.8rem;
     height: 4.8rem;
+    position: absolute;
+    right: 0;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: none;
+    outline: none;
+    background-image: url(../svg/search.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color ease-in 0.2s;
+}
+
+.new-post__search-btn:hover {
+    background-color: #323232;
+}
+
+
+/*subscribe-form*/
+
+.subscribe {
+    margin-bottom: 4.4rem;
+}
+
+.subscribe__input {
+    margin-bottom: 1.7rem;
+    padding: 1.8rem;
+}
+
+.subscribe__btn {
+    width: 100%;
+    height: 5rem;
+    border-radius: none;
+    border: none;
+    background-color: var(--main-color);
+    font-size: 1.4rem;
+    font-family: inherit;
+    color: #ffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color ease-in 0.2s;
+}
+
+.subscribe__btn:hover {
+    background-color: #323232;
+}
+
+
+/*aside__tags*/
+
+.tags__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.tags__item {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.aside-tags__link {
+    display: block;
+    padding: 0.5rem 1.2rem;
+    font-size: 1.2rem;
+    color: #0f0d0e;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: border-color ease-in 0.2s;
+    border: 0.3rem solid #eeeeee;
+}
+
+.aside-tags__link:hover {
+    border-color: var(--main-color);
+}
+
+
+/*aside__thems*/
+
+.aside__thems {
+    margin-top: 4.3rem;
+    margin-bottom: 4.4rem;
+}
+
+.thems__list {
+    margin-top: 2.4rem;
+    list-style: none;
+}
+
+.thems__item {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.thems__link {
+    color: black;
+}
+
+.thems__link:hover {
+    color: #b59f5b;
+}
+
+.thems__item:after {
+    content: "";
+    display: block;
+    margin: 1.1rem 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: #eeeeee;
+}
+
+.thems__count {
+    vertical-align: super;
+    color: #b59f5b;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/*shop*/
+
+.shop {
+    margin-bottom: 2.8rem;
+}
+
+.shop__img {
+    display: block;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.shop__content {
+    padding: 5.3rem 2.2rem 2.6rem 1.8rem;
+    border: 0.3rem solid var(--main-color);
+    margin-top: -2.8rem;
+    z-index: 2;
+}
+
+.shop__title {
+    font-size: 1.7rem;
+    color: #0f0d0e;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.shop__text {
+    font-size: 1.5rem;
+    line-height: 1.47;
+    color: #0f0d0e;
+}
+
+.shop__text-link {
+    color: var(--main-color);
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.shop__text-link:hover {
+    text-decoration: underline;
+}
+
+.shop__bottom-content {
+    display: flex;
+    justify-content: space-between;
 }
