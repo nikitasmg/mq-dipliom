@@ -289,8 +289,10 @@
                     <li class="thems__item"><a href="#" class="thems__link">Йога</a> <span class="thems__count">8</span></li>
                 </ul>
             </section>
-            <section class="shop">
-                <h2 class="title shop__title"> Наши изделия</h2>
+        </aside>
+        <section class="shop">
+            <h2 class="title shop__title"> Наши изделия</h2>
+            <article class="shop__article">
                 <picture class="shop__picture">
                     <source class="shop__img-tablet" srcset="images/shop-item-tablet1.jpg" media="(min-width: 641px) and (max-width: 1200px)">
                     <source class="shop__img-desk" srcset="images/shop-item-desk1.jpg" media="(min-width: 1201px)">
@@ -301,17 +303,95 @@
                     <p class="shop__text"> Набор из двух подушек с модными принтами. Видео о создании <a class="shop__text-link" href="#">здесь</a> .</p>
                     <div class="shop__bottom-content">
                         <div class="shop__price">
-                            <span class="price__old">1000 ₽</span>
-                            <span class="price__new">800 ₽</span>
+                            <span class="price-old">1000 ₽</span>
+                            <span class="price-new">800 ₽</span>
                         </div>
-                        <div class="shop__link">
-                            <a href="#"> в магазин</a>
-                        </div>
+                        <a href="#" class="shop__link"> в магазин</a>
                     </div>
                 </div>
-            </section>
-        </aside>
+            </article>
+            <article class="shop__article">
+                <picture class="shop__picture">
+                    <source class="shop__img-tablet" srcset="images/shop-item-tablet2.jpg" media="(min-width: 641px) and (max-width: 1200px)">
+                    <source class="shop__img-desk" srcset="images/shop-item-desk2.jpg" media="(min-width: 1201px)">
+                    <img class="shop__img" src="images/shop-item-mobile2.jpg" alt="Кукла зайчик">
+                </picture>
+                <div class="shop__content">
+                    <h3 class="shop__title">Кукла «Зайчик»</h3>
+                    <p class="shop__text"> Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена<a class="shop__text-link" href="#"> весенняя серия постов</a> в блоге и несколько подкастов.</p>
+                    <div class="shop__bottom-content">
+                        <div class="shop__price">
+                            <span class="price-new">1000 ₽</span>
+                        </div>
+                        <a href="#" class="shop__link"> в магазин</a>
+                    </div>
+                </div>
+            </article>
+            <article class="shop__article">
+                <picture class="shop__picture">
+                    <source class="shop__img-tablet" srcset="images/shop-item-tablet3.jpg" media="(min-width: 641px) and (max-width: 1200px)">
+                    <source class="shop__img-desk" srcset="images/shop-item-desk3.jpg" media="(min-width: 1201px)">
+                    <img class="shop__img" src="images/shop-item-mobile3.jpg" alt="Шестиугольная рамка">
+                </picture>
+                <div class="shop__content">
+                    <h3 class="shop__title">Шестиугольная рамка</h3>
+                    <p class="shop__text"> Необычная рамка для украшения дома из видео
+                        <a class="shop__text-link" href="#"> «Как сделать рамку из подручных средств за 30 минут» </a>
+                    </p>
+                    <div class="shop__bottom-content">
+                        <div class="shop__price">
+                            <span class="price-old">500 ₽</span>
+                            <span class="price-new">400 ₽</span>
+                        </div>
+                        <a href="#" class="shop__link"> в магазин</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <footer class="footer">
+            <address class="footer__social">
+              <ul class="social__list">
+                <li class="social__item"> <a href="#" class="social__link social__twitter"> <span class="hidden-text"> Профиль компании в Твиттере</span> </a></li>
+                <li class="social__item"> <a href="#" class="social__link social__pinterest"> <span class="hidden-text"> Профиль компании в Пинтересте</span> </a></li>
+                <li class="social__item"> <a href="#" class="social__link social__facebook"> <span class="hidden-text"> Профиль компании в Фэйсбуке</span> </a></li>
+                <li class="social__item"> <a href="#" class="social__link social__instagram"> <span class="hidden-text"> Профиль компании в Инстаграме</span> </a></li>
+                <li class="social__item"> <a href="#" class="social__link social__tumblr"> <span class="hidden-text"> Профиль компании в Тумблере</span> </a></li>
+        
+              </ul>
+            </address>
+            <div class="copyright">
+                <a href="#" class="copyright__link"> Copyright © 2009–2019 City Blog LLC. </a>
+            </div>
+        </footer>
     </div>
+    </div>
+
+    <div class="popup-conteiner popup-hidden">
+        <div class="popup">
+            <h2 class="title popup title"> ваш фидбек</h2>
+            <form action="feedback">
+                <label for="popupSelect" class="select__title">Как часто вы заходите на сайт?</label>
+                <select name="select" id="popupSelect" required>
+                <option value="value1"> Почти каждый день</option>
+                <option value="value1"> Раз в неколько дней</option>
+                <option value="value1"> Раз в неколько недель</option>
+                <option value="value1"> Несколько раз в год</option>
+            </select>
+                <div class="radio__conteiner">
+                    <input type="radio" name="confirm" value="yes" id="yes">
+                    <label for="yes"> Да</label>
+                    <input type="radio" name="confirm" value="no" id="no">
+                    <label for="no"> Нет</label>
+                </div>
+
+                <div class="area__conteiner">
+                    <label for="text-area" class="area__text">Расскажите, какой контент вы хотели бы 
+                        видеть на нашем сайте?</label>
+                    <textarea name="text-area" id="text-area" cols="30" rows="10" placeholder="Может, больше рецептов"></textarea>
+                </div>
+                <button type="submit" class="popup__btn">Отправить</button>
+            </form>
+        </div>
     </div>
 </body>
 
