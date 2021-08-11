@@ -366,33 +366,44 @@
     </div>
     </div>
 
-    <div class="popup-conteiner popup-hidden">
+    <div class="popup-conteiner" id="popup">
         <div class="popup">
-            <h2 class="title popup title"> ваш фидбек</h2>
+            <h2 class="title popup-title"> ваш фидбек</h2>
             <form action="feedback">
                 <label for="popupSelect" class="select__title">Как часто вы заходите на сайт?</label>
-                <select name="select" id="popupSelect" required>
+                <select name="select" class="select" id="popupSelect" required>
                 <option value="value1"> Почти каждый день</option>
                 <option value="value1"> Раз в неколько дней</option>
                 <option value="value1"> Раз в неколько недель</option>
                 <option value="value1"> Несколько раз в год</option>
             </select>
                 <div class="radio__conteiner">
-                    <input type="radio" name="confirm" value="yes" id="yes">
-                    <label for="yes"> Да</label>
-                    <input type="radio" name="confirm" value="no" id="no">
-                    <label for="no"> Нет</label>
+                    <label class="radio__text" for="confirm">Вы подписаны на e-mail рассылку</label>
+                    <input class="radio" type="radio" name="confirm" value="yes" id="yes" required>
+                    <label class="radio__label" for="yes"> Да</label>
+                    <input class="radio" type="radio" name="confirm" value="no" id="no" required>
+                    <label class="radio__label" for="no"> Нет</label>
                 </div>
 
                 <div class="area__conteiner">
                     <label for="text-area" class="area__text">Расскажите, какой контент вы хотели бы 
                         видеть на нашем сайте?</label>
-                    <textarea name="text-area" id="text-area" cols="30" rows="10" placeholder="Может, больше рецептов"></textarea>
+                    <textarea class="text-area" name="text-area" id="text-area" placeholder="Может, больше рецептов"></textarea>
                 </div>
                 <button type="submit" class="popup__btn">Отправить</button>
             </form>
+            <button type="button" id="closePopup" class="close__popup"></button>
         </div>
     </div>
 </body>
+
+<script>
+    let closePopup = document.getElementById('closePopup')
+
+    closePopup.onclick = function() {
+        let popup = document.getElementById('popup')
+        popup.classList.add('popup-hidden')
+    }
+</script>
 
 </html>
