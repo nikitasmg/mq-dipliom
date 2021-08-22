@@ -400,13 +400,14 @@
             <button type="button" id="closePopup" class="close__popup"></button>
         </div>
     </div>
+    <script>
+        let closePopup = document.getElementById('closePopup')
+        closePopup.onclick = function() {
+            let popup = document.getElementById('popup')
+            popup.classList.add('popup-hidden')
+        }
+    </script>
 </body>
-<script>
-    let closePopup = document.getElementById('closePopup')
-    closePopup.onclick = function() {
-        let popup = document.getElementById('popup')
-        popup.classList.add('popup-hidden')
-    }
-</script>
+
 
 </html>
