@@ -1,3 +1,141 @@
-h1 {
-    color: rgb(197, 29, 155);
+.container {
+    max-width: 120rem;
+}
+
+.header {
+    background-image: url(../images/banner-bg.jpg);
+    padding-bottom: 15rem;
+}
+
+.burger__container {
+    display: none;
+}
+
+.header__burger {
+    display: flex;
+    align-items: center;
+}
+
+#burger {
+    display: none;
+}
+
+.header__nav {
+    display: block;
+    position: relative;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__li {
+    margin-right: 3.5rem;
+    margin-bottom: 0;
+}
+
+.nav__item:hover {
+    text-decoration: underline;
+}
+
+.header__top-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.header__logo-container {
+    width: 18rem;
+    margin: 0;
+}
+
+.header__logo {
+    width: 18rem;
+}
+
+.header__title {
+    font-size: 4.5rem;
+    line-height: 1.66;
+    max-width: 69rem;
+    margin: 12.5rem auto 0;
+}
+
+
+/*trends*/
+
+.trends__conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.trends_article {
+    flex-grow: 1;
+    padding-top: 13.5rem;
+    max-width: calc(25% - 0.4rem);
+}
+
+.trends__content {
+    padding: 3.5rem 6rem 3.5rem 3rem;
+}
+
+
+/*page*/
+
+.page {
+    display: flex;
+}
+
+.main {
+    max-width: 75rem;
+}
+
+.main__last-post {
+    display: flex;
+}
+
+.main__last-post::after {
+    display: none;
+}
+
+.aside {
+    min-width: 27rem;
+    max-width: 27rem;
+    margin-left: 3.5rem;
+}
+
+.last-post__image-container {
+    margin: 0 0 1.5rem;
+    min-width: 38rem;
+}
+
+.last-post__header {
+    margin-left: 3rem;
+}
+
+
+/*shop*/
+
+.shop__conteiner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.shop__article {
+    max-width: calc(33.333% - 3.3rem);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.shop__content {
+    flex-grow: 1;
 }
